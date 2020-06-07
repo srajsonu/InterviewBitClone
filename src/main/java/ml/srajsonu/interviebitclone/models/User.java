@@ -2,8 +2,7 @@ package ml.srajsonu.interviebitclone.models;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
-
+import ml.srajsonu.interviebitclone.utils.Constants;
 import java.util.UUID;
 
 @Getter
@@ -12,9 +11,11 @@ public class User {
 
     private UUID id;
     private String name;
-    private Gender gender;
+    private Constants.Gender gender;
 
-    User(String name, Gender gender) {
+
+
+    public User(String name, Constants.Gender gender) {
         this.id = UUID.randomUUID();
         this.name = name;
         this.gender = gender;
